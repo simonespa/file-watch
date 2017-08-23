@@ -1,8 +1,7 @@
-const fs = require('fs');
-const targetFile = './watched-file.json';
-const express = require('express');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
+const fs = require('fs');
+const targetFile = './watched-file.json';
 
 if (cluster.isMaster) {
 	console.log(`${process.pid} - Master started`);
